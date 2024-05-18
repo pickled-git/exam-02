@@ -1,3 +1,6 @@
+## Subject
+
+```
 Assignment name  : snake_to_camel
 Expected files   : snake_to_camel.c
 Allowed functions: malloc, free, realloc, write
@@ -19,3 +22,4 @@ $>./camel_to_snake "hello_world" | cat -e
 helloWorld$
 $>./camel_to_snake | cat -e
 $
+```

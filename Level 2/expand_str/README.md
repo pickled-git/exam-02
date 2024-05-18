@@ -1,3 +1,6 @@
+## Subject
+
+```
 Assignment name  : expand_str
 Expected files   : expand_str.c
 Allowed functions: write
@@ -24,3 +27,4 @@ $
 $> ./expand_str "" | cat -e
 $
 $>
+```
