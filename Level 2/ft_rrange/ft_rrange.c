@@ -1,31 +1,18 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_rrange.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: oprosvir <oprosvir@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/13 23:17:27 by oprosvir          #+#    #+#             */
-/*   Updated: 2024/05/13 23:53:02 by oprosvir         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdlib.h>
+#include <stdio.h>
 
 int     *ft_rrange(int start, int end)
 {
-    int *range;
-    int size;
-
+    int len;
     if (end >= start)
-        size = end - start + 1;
+        len = end - start + 1;
     else
-        size = start - end + 1;
-    range = (int *)malloc(sizeof(int) * size);
+        len = start - end + 1;
+    int *range = malloc(sizeof(int) * len);
     if (!range)
         return NULL;
     int i = 0;
-    while (i < size)
+    while (i < len)
     {
         if (end > start)
             range[i] = end - i;
@@ -36,22 +23,12 @@ int     *ft_rrange(int start, int end)
     return range;
 }
 
-/*int main (int argc, char * argv[])
+/*int main ()
 {
-    int *val;
-    int start = 0;
-    int end = -3;
-    int i = 0;
-
-    (void)argc;
-    (void)argv;
-    int size = (end >= start) ? (end - start + 1) : (start - end + 1);
-    val = ft_rrange(start, end);
-    while (i < size)
-    {
-        printf("%d ", val[i]);
-        i++;
-    }
-    free(val);
-
+    int start = -1;
+    int end = 3;
+    int len = (end >= start) ? (end - start + 1) : (start - end + 1);
+    int *arr = ft_rrange(start, end);
+    for (int i = 0; i < len; i++)
+        printf("%d\n", arr[i]);
 }*/
