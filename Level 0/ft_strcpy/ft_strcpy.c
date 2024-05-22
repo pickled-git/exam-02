@@ -1,29 +1,29 @@
 #include <string.h>
 #include <stdio.h>
 
+
 char    *ft_strcpy(char *s1, char *s2)
 {
-    char *start = s1;
-    while (*s2)
+    int i = 0;
+    while (s2[i])
     {
-        *s1 = *s2;
-        s2++;
-        s1++;
+        s1[i] = s2[i];
+        i++;
     }
-    *s1 = '\0';
-    return start;
+    s1[i] = '\0';
+    return s1;
 }
+
+/*int main()
+{
+    char str[] = "Hello !";
+    char dest[10];
+    printf("%s\n", strcpy(dest, str));
+    printf("%s\n", ft_strcpy(dest, str));
+
+}*/
 
 /*
-
-int main()
-{
-    char dest[10];
-    char src[] = "Hey, Ola!";
-
-    printf("%s\n", ft_strcpy(dest, src));
-}
-
 
 char *strcpy(char *dest, const char *src);
 The  strcpy()  function  copies the string pointed to by src, including
@@ -32,9 +32,8 @@ The  strcpy()  function  copies the string pointed to by src, including
        large enough to receive the copy.  Beware  of  buffer  overruns!   (See
        BUGS.)
 
-       The strcpy() and strncpy() functions return a pointer to  the  destina‐
+The strcpy() and strncpy() functions return a pointer to  the  destina‐
        tion string dest.
-
 
 
 */
