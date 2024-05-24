@@ -1,3 +1,6 @@
+```
+FINAL GRADE: 100/100
+```
 ## Exam Details
 
 - This exam has 4 Levels, with 1 question from each level.
